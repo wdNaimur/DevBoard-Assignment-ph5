@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>DevBoard</title>
     <!-- daisyui cdn  -->
 
@@ -14,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="assets/logo.png" type="image/png" />
     <!-- poppins font  end -->
   </head>
   <body
@@ -27,7 +29,7 @@
         <!-- logo box -->
         <div class="flex items-center gap-2">
           <img class="h-12" src="assets/logo.png" alt="Logo" />
-          <h1 class="text-4xl font-light">
+          <h1 class="text-4xl font-light md:block hidden">
             Dev<span class="font-bold">Board</span>
           </h1>
         </div>
@@ -41,7 +43,7 @@
           </div>
 
           <div
-            class="bg-blue-50 p-3 rounded-full hover:animate-spin cursor-pointer"
+            class="bg-blue-50 p-3 rounded-full hover:animate-spin cursor-pointer md:block hidden"
             id="theme-btn"
           >
             <img
@@ -53,15 +55,17 @@
         </div>
       </nav>
     </header>
-    <div class="grid grid-cols-4 gap-6 container mx-auto mt-5 mb-16">
-      <main class="col-span-3 bg-white rounded-2xl">
+    <div
+      class="grid lg:grid-cols-4 md:grid-cols-9 grid-cols-1 gap-6 container mx-auto mt-5 mb-16"
+    >
+      <main class="lg:col-span-3 md:col-span-5 col-span-1 bg-white rounded-2xl">
         <!-- title grid -->
         <div
-          class="grid grid-cols-4 gap-6 pt-6 px-6 pb-8 border-b-[3px] border-b-[#3752FD33] border-dashed"
+          class="grid 2xl:grid-cols-4 lg:grid-cols-2 gap-6 pt-6 px-6 pb-8 border-b-[3px] border-b-[#3752FD33] border-dashed"
         >
           <!-- task Assigned part  -->
           <div
-            class="flex items-center justify-center bg-blue-50 py-8 rounded-xl"
+            class="2xl:order-1 lg:order-1 flex items-center justify-center bg-blue-50 py-8 rounded-xl"
           >
             <div class="flex items-center gap-5">
               <!-- icon  -->
@@ -79,16 +83,17 @@
           </div>
           <!-- Discover Something part  -->
           <div
-            class="col-span-2 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex items-center ps-10 gap-5 rounded-xl"
+            id="discover-new"
+            class="2xl:order-2 lg:order-3 lg:col-span-2 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex items-center justify-center gap-5 rounded-xl cursor-pointer py-3"
           >
             <img src="assets/board.png" alt="board" />
-            <h2 class="text-white text-2xl font-medium">
+            <h2 class="text-white xl::text-2xl md:text-xl text-lg font-medium">
               Discover Something <br />New Today!
             </h2>
           </div>
           <!-- date part  -->
           <div
-            class="flex items-center justify-center bg-blue-50 py-8 rounded-xl"
+            class="2xl:order-3 lg:order-2 flex items-center justify-center bg-blue-50 py-8 rounded-xl"
           >
             <div class="flex items-center gap-5">
               <!-- icon  -->
@@ -112,7 +117,7 @@
         </div>
 
         <!-- main all task grid  -->
-        <div class="grid grid-cols-3 gap-3 p-6">
+        <div class="grid 2xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-3 p-6">
           <!-- task 1  -->
           <div class="p-6 rounded-2xl bg-blue-50">
             <div
@@ -288,7 +293,9 @@
           </div>
         </div>
       </main>
-      <aside class="bg-white rounded-2xl pt-6">
+      <aside
+        class="bg-white rounded-2xl pt-6 lg:col-span-1 md:col-span-4 col-span-1"
+      >
         <div class="px-5 flex gap-4 items-center justify-center -ms-4">
           <img class="w-6 h-6" src="assets/activity.png" alt="activity" />
           <h3 class="text-xl font-medium">Activity Log</h3>
@@ -304,12 +311,7 @@
           </button>
         </div>
         <div id="activity-log" class="flex flex-col px-7 gap-6 py-3">
-          <p class="text-black opacity-70 p-2.5 bg-blue-100 rounded-lg">
-            You have Complete The Task Add Dark Mode at 12:48:15 PM
-          </p>
-          <p class="text-black opacity-70 p-2.5 bg-blue-100 rounded-lg">
-            You have Complete The Task Add Dark Mode at 12:48:15 PM
-          </p>
+          <!-- done task will be added here  -->
         </div>
       </aside>
     </div>
