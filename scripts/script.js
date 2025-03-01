@@ -5,6 +5,7 @@ function getRandomLightColor() {
   let l = 90;
   return `hsl(${h}, ${s}%, ${l}%)`;
 }
+
 document.getElementById("theme-btn").addEventListener("click", function () {
   document.body.style.backgroundColor = getRandomLightColor();
 });
@@ -25,6 +26,7 @@ document.getElementById(
           <span>${year}</span>
         </span>`;
 // end today date
+
 // start Clear History
 document
   .getElementById("clear-history-btn")
@@ -34,8 +36,9 @@ document
     activityLog.innerHTML = "";
   });
 // end Clear History
+
 // start complete button part
-// start task left function
+// start task Number function
 function taskLeft() {
   let taskLeft = parseInt(
     document.getElementById("task-left-number").innerText
@@ -48,6 +51,7 @@ function taskDone() {
   );
   document.getElementById("task-done-number").innerText = taskLeft + 1;
 }
+// end  task Number function
 
 // main button
 document.querySelectorAll(".complete-btn").forEach((button) => {
