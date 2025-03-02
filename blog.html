@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>DevBoard</title>
+    <title>DevBoard-Blog</title>
     <!-- daisyui cdn  -->
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -39,12 +39,155 @@
         Back to Desk
       </button>
     </nav>
-    <section>
+    <section class="mb-16">
       <h1 class="py-6 font-bold text-2xl text-center">Blogs</h1>
       <div class="flex flex-col gap-4">
-        <div class="p-6 bg-white rounded-xl">question and answer</div>
-        <div class="p-6 bg-white rounded-xl">question and answer</div>
-        <div class="p-6 bg-white rounded-xl">question and answer</div>
+        <!-- question box 1 -->
+        <div class="bg-white rounded-xl">
+          <div class="px-6 py-5">
+            <h2 class="text-lg font-bold">
+              Question-1: What are the different ways to select an element in
+              the DOM?
+            </h2>
+          </div>
+          <div
+            class="px-6 py-5 border-t-[3px] border-t-[#3752FD33] border-dashed"
+          >
+            <p class="opacity-80 text-lg font-medium mb-1">
+              <span class="font-bold">Answer:</span>
+              The different ways to select an element in the DOM are:
+            </p>
+            <ul class="opacity-80 list-disc ms-10 space-y-1">
+              <li>getElementById</li>
+              <li>getElementsByClassName</li>
+              <li>getElementsByTagName</li>
+              <li>querySelector</li>
+              <li>querySelectorAll</li>
+              <li>getElementsByName</li>
+            </ul>
+          </div>
+        </div>
+        <!-- question box 2 -->
+        <div class="bg-white rounded-xl">
+          <div class="px-6 py-5">
+            <h2 class="text-lg font-bold">
+              Question-2: What is the difference between innerHTML, innerText,
+              and textContent ?
+            </h2>
+          </div>
+          <div
+            class="px-6 py-5 border-t-[3px] border-t-[#3752FD33] border-dashed"
+          >
+            <p class="opacity-80 text-lg font-medium mb-1">
+              <span class="font-bold">Answer: </span>The difference between
+              innerHTML, innerText, and textContent are:
+            </p>
+            <div class="ms-5">
+              <p class="opacity-80 text-lg font-medium mb-1">innerHTML:</p>
+              <ul class="opacity-80 list-disc ms-10 space-y-1">
+                <li>Returns or sets the HTML content inside an element.</li>
+                <li>Parses and renders HTML tags.</li>
+              </ul>
+              <p class="opacity-80 text-lg font-medium mb-1">innerHTML:</p>
+              <ul class="opacity-80 list-disc ms-10 space-y-1">
+                <li>
+                  Returns or sets only the visible text inside an element.
+                </li>
+                <li>Ignores hidden elements</li>
+              </ul>
+              <p class="opacity-80 text-lg font-medium mb-1">textContent:</p>
+              <ul class="opacity-80 list-disc ms-10 space-y-1">
+                <li>Returns or sets all text, including hidden text.</li>
+                <li>Does not parse HTML tags, treats them as plain text.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- question box 3 -->
+        <div class="bg-white rounded-xl">
+          <div class="px-6 py-5">
+            <h2 class="text-lg font-bold">
+              Question-3: What is event delegation in the DOM?
+            </h2>
+          </div>
+          <div
+            class="px-6 py-5 border-t-[3px] border-t-[#3752FD33] border-dashed"
+          >
+            <p class="opacity-80 text-lg font-medium mb-1">
+              <span class="font-bold">Answer: </span>Event delegation in the DOM
+              is:
+            </p>
+
+            <ul class="opacity-80 list-disc ms-10 space-y-1">
+              <li>
+                Uses event bubbling to allow a parent element to handle events
+                for its child elements.
+              </li>
+              <li>
+                Improves performance and works for dynamically added elements.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- question box 4 -->
+        <div class="bg-white rounded-xl">
+          <div class="px-6 py-5">
+            <h2 class="text-lg font-bold">
+              Question-4: What is event bubbling in the DOM?
+            </h2>
+          </div>
+          <div
+            class="px-6 py-5 border-t-[3px] border-t-[#3752FD33] border-dashed"
+          >
+            <p class="opacity-80 text-lg font-medium mb-1">
+              <span class="font-bold">Answer: </span>Event bubbling in the DOM
+              is:
+            </p>
+
+            <ul class="opacity-80 list-disc ms-10 space-y-1">
+              <li>
+                Event bubbling is a process where an event starts from the
+                target element and propagates up to its parent elements.
+              </li>
+              <li>
+                It allows handling events at a higher level instead of adding
+                listeners to multiple child elements.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- question box 4 -->
+        <div class="bg-white rounded-xl">
+          <div class="px-6 py-5">
+            <h2 class="text-lg font-bold">
+              Question-5: How do you create, add, and remove elements using
+              JavaScript?
+            </h2>
+          </div>
+          <div
+            class="px-6 py-5 border-t-[3px] border-t-[#3752FD33] border-dashed"
+          >
+            <p class="opacity-80 text-lg font-medium mb-1">
+              <span class="font-bold">Answer: </span>
+            </p>
+            <div>
+              <ul class="opacity-80 list-disc ms-10 space-y-1">
+                <li>
+                  <span class="font-medium">Create an element</span> using
+                  appendChild().
+                </li>
+                <li>
+                  <span class="font-medium">Add an element</span> using
+                  document.createElement().
+                </li>
+                <li>
+                  <span class="font-medium">Remove an element</span> using
+                  remove().
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <script src="./scripts/script.js"></script>

@@ -51,19 +51,7 @@ function taskDone() {
   document.getElementById("task-done-number").innerText = taskDone + 1;
 }
 // end  task Number function
-// start time for activity log
-let hours = date.getHours();
-let minutes = date.getMinutes();
-let seconds = date.getSeconds();
-let period = hours >= 12 ? "PM" : "AM";
 
-// Convert 24-hour format to 12-hour format
-hours = hours % 12;
-hours = hours ? hours : 12;
-let hour = hours < 10 ? "0" + hours : hours;
-let minute = minutes < 10 ? "0" + minutes : minutes;
-let second = seconds < 10 ? "0" + seconds : seconds;
-// end time for activity log
 // main button
 document.querySelectorAll(".complete-btn").forEach((button) => {
   button.addEventListener("click", (event) => {
@@ -86,13 +74,26 @@ document.querySelectorAll(".complete-btn").forEach((button) => {
     // taskLeft and taskDone
     taskLeft();
     taskDone();
+    // start time for activity log
+    const date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    let period = hours >= 12 ? "PM" : "AM";
 
+    // Convert 24-hour format to 12-hour format
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    let hour = hours < 10 ? "0" + hours : hours;
+    let minute = minutes < 10 ? "0" + minutes : minutes;
+    let second = seconds < 10 ? "0" + seconds : seconds;
+    // end time for activity log
     // individual complete button heading
     const taskCard = event.target.parentElement.parentElement;
     const heading = taskCard.querySelector("h2");
     const taskList = document.createElement("p");
     taskList.innerHTML = `<p class="text-black opacity-70 p-2.5 bg-blue-100 rounded-lg">
-            You have Complete The Task ${heading.textContent} at ${hour}:${minute}:${second} ${period}
+            You have Completed The Task ${heading.textContent} at ${hour}:${minute}:${second} ${period}
           </p>`;
     document.getElementById("activity-log").appendChild(taskList);
   });
